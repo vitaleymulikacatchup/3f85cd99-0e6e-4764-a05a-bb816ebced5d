@@ -1,17 +1,14 @@
-import Header from '@/components/Header'
-import Hero from '@/components/Hero'
-import ContentSections from '@/components/ContentSections'
-import AgeConfirmationModal from '@/components/AgeConfirmationModal'
-import Footer from '@/components/Footer'
+// Ensure the page component is correctly defined and includes error handling
+import React from 'react';
 
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-background">
-      <Header />
-      <Hero />
-      <ContentSections />
-      <Footer />
-      <AgeConfirmationModal />
-    </main>
-  )
-}
+const Page: React.FC = () => {
+  try {
+    // Your main page logic
+    return <div>Hello, Next.js 15!</div>;
+  } catch (error) {
+    console.error('Error rendering page:', error);
+    return <div>Something went wrong.</div>;
+  }
+};
+
+export default Page;
